@@ -28,7 +28,6 @@ class SecondViewController: UIViewController, GMSMapViewDelegate, CLLocationMana
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.distanceFilter = 300
-        addMarkers()
         locationManager.startUpdatingLocation()
         //startLocation()
         
@@ -37,10 +36,13 @@ class SecondViewController: UIViewController, GMSMapViewDelegate, CLLocationMana
     func locationManager(manager: CLLocationManager!, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
         switch status {
         case .NotDetermined:
+            println("aaa")
             if locationManager.respondsToSelector("requestWhenInUseAuthorization") { locationManager.requestWhenInUseAuthorization() }
         case .Restricted, .Denied:
+            println("bbb")
             self.alertLocationServicesDisabled()
         case .Authorized, .AuthorizedWhenInUse:
+            println("ccc")
             break
         default:
             break
@@ -50,10 +52,11 @@ class SecondViewController: UIViewController, GMSMapViewDelegate, CLLocationMana
     func locationManager(manager: CLLocationManager!, didUpdateToLocation newLocation: CLLocation!, fromLocation oldLocation: CLLocation!){
         println("Loaded")
         var coordinate: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude:newLocation.coordinate.latitude,longitude:newLocation.coordinate.longitude)
-        //var now: GMSCameraPosition = GMSCameraPosition.cameraWithLatitude(coordinate.latitude,longitude:coordinate.longitude,zoom:17)
+        //var now: GMSCameraPosition = GMSCameraPosition.cameraWithLatitude(coordinate.latitude,longitude:coordinate.longitude,zoom:9)
         
         var now:GMSCameraPosition = GMSCameraPosition.cameraWithLatitude(35.701631,longitude:139.416861,zoom:16.0)
-
+        addMarkers()
+        
         mapview.camera = now
         
     }
@@ -86,6 +89,7 @@ class SecondViewController: UIViewController, GMSMapViewDelegate, CLLocationMana
         rondine.title = "rondine"
         rondine.snippet = "TEL:042-595-8018"
         rondine.position = CLLocationCoordinate2DMake(35.701631,139.416861)
+        rondine.map = mapview
         
         
     }

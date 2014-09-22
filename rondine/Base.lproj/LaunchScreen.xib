@@ -16,8 +16,8 @@
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="logo-white" translatesAutoresizingMaskIntoConstraints="NO" id="XYK-jW-cXR">
-                    <rect key="frame" x="120" y="98" width="240" height="47"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-white" translatesAutoresizingMaskIntoConstraints="NO" id="XYK-jW-cXR">
+                    <rect key="frame" x="120" y="216" width="240" height="47"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="47" id="alY-r1-TYD"/>
                         <constraint firstAttribute="width" constant="240" id="pgi-O5-K50"/>
