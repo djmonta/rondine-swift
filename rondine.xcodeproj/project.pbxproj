@@ -55,7 +55,6 @@
 		708FB18019CEBE6800709196 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
 		708FB18219CEBE9B00709196 /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
 		708FB18619CEC04700709196 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		708FB18A19CECA4900709196 /* rondine-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "rondine-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 		708FB18D19CECB9C00709196 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		708FB18E19CECB9C00709196 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		708FB18F19CECB9C00709196 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
@@ -67,6 +66,7 @@
 		708FB19519CECB9C00709196 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		708FB19619CECB9C00709196 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		708FB19719CECB9C00709196 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		70EBE8A019CFEC340070FECA /* rondine-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "rondine-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,7 +122,7 @@
 		700ABF1619CEB0F700BDC6A8 /* rondine */ = {
 			isa = PBXGroup;
 			children = (
-				708FB18A19CECA4900709196 /* rondine-Bridging-Header.h */,
+				70EBE8A019CFEC340070FECA /* rondine-Bridging-Header.h */,
 				700ABF1919CEB0F700BDC6A8 /* AppDelegate.swift */,
 				700ABF1B19CEB0F700BDC6A8 /* FirstViewController.swift */,
 				700ABF1D19CEB0F700BDC6A8 /* SecondViewController.swift */,
