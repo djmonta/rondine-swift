@@ -31,18 +31,24 @@ class SecondViewController: UIViewController, GMSMapViewDelegate, CLLocationMana
         locationManager.startUpdatingLocation()
         //startLocation()
         
+        
+        var now:GMSCameraPosition = GMSCameraPosition.cameraWithLatitude(35.701631,longitude:139.416861,zoom:16.0)
+        addMarkers()
+        
+        mapview.camera = now
+        
+        self.edgesForExtendedLayout = UIRectEdge.None
+        //self.view = mapview
+        
     }
     
     func locationManager(manager: CLLocationManager!, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
         switch status {
         case .NotDetermined:
-            println("aaa")
             if locationManager.respondsToSelector("requestWhenInUseAuthorization") { locationManager.requestWhenInUseAuthorization() }
         case .Restricted, .Denied:
-            println("bbb")
             self.alertLocationServicesDisabled()
         case .Authorized, .AuthorizedWhenInUse:
-            println("ccc")
             break
         default:
             break
@@ -53,11 +59,6 @@ class SecondViewController: UIViewController, GMSMapViewDelegate, CLLocationMana
         println("Loaded")
         var coordinate: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude:newLocation.coordinate.latitude,longitude:newLocation.coordinate.longitude)
         //var now: GMSCameraPosition = GMSCameraPosition.cameraWithLatitude(coordinate.latitude,longitude:coordinate.longitude,zoom:9)
-        
-        var now:GMSCameraPosition = GMSCameraPosition.cameraWithLatitude(35.701631,longitude:139.416861,zoom:16.0)
-        addMarkers()
-        
-        mapview.camera = now
         
     }
     
