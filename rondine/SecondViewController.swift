@@ -45,10 +45,13 @@ class SecondViewController: UIViewController, GMSMapViewDelegate, CLLocationMana
     func locationManager(manager: CLLocationManager!, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
         switch status {
         case .NotDetermined:
+            println("aaa")
             if locationManager.respondsToSelector("requestWhenInUseAuthorization") { locationManager.requestWhenInUseAuthorization() }
         case .Restricted, .Denied:
+            println("bbb")
             self.alertLocationServicesDisabled()
         case .Authorized, .AuthorizedWhenInUse:
+            println("ccc")
             break
         default:
             break
@@ -63,7 +66,7 @@ class SecondViewController: UIViewController, GMSMapViewDelegate, CLLocationMana
     }
     
     func locationManager(manager: CLLocationManager!, didFailWithError error: NSError!){
-        println("Error")
+        println("Error" + error.localizedDescription)
     }
     
     func alertLocationServicesDisabled() {
