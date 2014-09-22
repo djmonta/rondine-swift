@@ -419,7 +419,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "rondine-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "rondine/rondine-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -439,7 +439,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "rondine-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "rondine/rondine-Bridging-Header.h";
 			};
 			name = Release;
 		};
