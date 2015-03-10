@@ -50,7 +50,7 @@ class SecondViewController: UIViewController, GMSMapViewDelegate, CLLocationMana
         case .Restricted, .Denied:
             println("bbb")
             self.alertLocationServicesDisabled()
-        case .Authorized, .AuthorizedWhenInUse:
+        case .AuthorizedAlways, .AuthorizedWhenInUse:
             println("ccc")
             break
         default:
@@ -78,7 +78,7 @@ class SecondViewController: UIViewController, GMSMapViewDelegate, CLLocationMana
             
             alert.addAction(UIAlertAction(title: "Settings", style: .Default, handler: { action in
                 let url = NSURL(string: UIApplicationOpenSettingsURLString)
-                UIApplication.sharedApplication().openURL(url)
+                UIApplication.sharedApplication().openURL(url!)
             }))
             alert.addAction(UIAlertAction(title: "Close", style: .Cancel, handler: nil))
             
